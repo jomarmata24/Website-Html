@@ -1,0 +1,683 @@
+<html>
+<title>
+    PHILIPPINE TREASURE
+</title>
+<head>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        a {
+            position: absolute;
+            font-family: Berlin Sans FB;
+        }
+        /* href manual set up */       
+        .home {
+            left: 53%;
+            top: 12px;
+            font-size: 25px;
+        }      
+        .about {
+            left: 60%;
+            top: 12px;
+            font-size: 25px;
+        }
+        
+        .blog {
+            left: 67%;
+            top: 12px;
+            font-size: 25px;
+        }
+        
+        .service {
+            left: 73%;
+            top: 12px;
+            font-size: 25px;
+        }
+        
+        .contact {
+            left: 82%;
+            top: 12px;
+            font-size: 25px;
+        }
+        /* Heading */
+        
+        h1 {
+            position: absolute;
+            left: 5%;
+            top: 10%;
+            font-family: Berlin Sans FB;
+            font-size: 100px;
+            color:red
+        }
+        .connect {
+            position: absolute;
+            left: 5%;
+            top: 20%;
+            font-family: Berlin Sans FB;
+            font-size: 100px;
+            color: blue
+        }
+        h3 {
+            position: absolute;
+            left: 5%;
+            top: 10%;
+            font-family: Berlin Sans FB;
+            font-size: 25px;
+            
+        }
+        /* paralax scroll effecs*/
+        
+        #home {
+            height: 100vh;
+            width: 100%;
+            background-image: url(Picture/Homepage.jpg);
+            background-size: cover;
+            display: table;
+            background-attachment: fixed;
+            scroll-behavior: smooth;
+        }
+        
+        #about {
+            height: 100vh;
+            width: 100%;
+            background-image: url(Picture/about.jpg);
+            background-size: cover;
+            display: table;
+            background-attachment: fixed;
+            top: 50px;
+            scroll-behavior: smooth;
+        }
+        
+        #blog {
+            height: 100vh;
+            width: 100%;
+            background-image: url(Picture/blog.jpg);
+            background-size: cover;
+            display: table;
+            background-attachment: fixed;
+            scroll-behavior: smooth;
+        }
+        
+        #service {
+            height: 100vh;
+            width: 100%;
+            background-image: url(Picture/service.jpg);
+            background-size: cover;
+            display: table;
+            background-attachment: fixed;
+        }
+        
+        #contact {
+            height: 100vh;
+            width: 100%;
+            background-image: url(Picture/contact.jpg);
+            background-size: cover;
+            display: table;
+            background-attachment: fixed;
+        }
+        /* navbar design*/
+        
+        nav {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, #ccff99 0%, #33ccff 100%);
+            width: 99.15%;
+            position: fixed;
+            top: 0.01px;
+            height: 6%;
+        }
+        
+        .nav1 {
+            background: rgba(254, 254, 250, 0.7);
+            width: 99.15%;
+            position: absolute;
+            top: 4734px;
+            height: 5%;
+        }
+        /*hover effect on a href*/
+        
+        nav a :hover:before,
+        nav a :hover:after {
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+        
+        nav {
+            font-family: 'Titillium Web';
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        nav * {
+            box-sizing: border-box;
+            transition: all .35s ease;
+        }
+        
+        nav {
+            display: inline-block;
+            list-style: outside none none;
+        }
+        
+        nav a {
+            padding: .1em .7em;
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        
+        nav a::before,
+        nav a::after {
+            content: '';
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            transition: all .35s ease;
+            opacity: 0;
+        }
+        
+        nav a::before {
+            content: '';
+            right: 0;
+            top: 0;
+            border-top: 3px solid #3E8914;
+            border-right: 3px solid #2E640F;
+            transform: translate(-100%, 50%);
+        }
+        
+        nav a:after {
+            content: '';
+            left: 0;
+            bottom: 0;
+            border-bottom: 3px solid #2E640F;
+            border-left: 3px solid #3E8914;
+            transform: translate(100%, -50%)
+        }
+        
+        nav a:hover:before,
+        nav a:hover:after {
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+        
+        nav a:hover {
+            color: #3DA35D;
+        }
+        
+        .bgdesign1 {
+            border: 1px solid black;
+            position: absolute;
+            width: 30%;
+            top: 130%;
+            left: 10%;
+            height: 40vh;
+            padding: 60px;
+            background: rgba(255, 255, 255, 0.5);
+            color: Black;
+            text-align: center;
+            font-size: 20px;
+        }
+        .bgdesign2 {
+            border: 1px solid black;
+            position: absolute;
+            width: 30%;
+            top: 130%;
+            left: 63.1%;
+            height: 40vh;
+            padding: 60px;
+            background: rgba(255, 255, 255, 0.5);
+            color: Black;
+            text-align: center;
+            font-size: 20px;
+        }
+        h2{
+            position: absolute;
+            top: 10px;
+            left: 42%;
+        }
+        
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        
+        #myBtn:hover {
+            background-color: #555;
+        }
+        
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Position the image container (needed to position the left and right arrows) */
+        
+        .container {
+            position: relative;
+            top: 58px;
+        }
+        /* Hide the images by default */
+        
+        .mySlides {
+            display: none;
+            border: 5px solid blue;
+        }
+        /* Add a pointer when hovering over the thumbnail images */
+        
+        .cursor {
+            cursor: pointer;
+        }
+        /* Next & previous buttons */
+        
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: 20px;
+            padding: 16px;
+            margin-top: -50px;
+            color: red;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        /* Position the "next button" to the right */
+        
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        /* Number text (1/18) */
+        
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 18px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        /* Container for image text */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Six columns side by side */
+        
+        .column {
+            float: left;
+            width: 312.3px;
+            font-size: 12px;
+            border: 1px solid white;
+        }
+        /* Add a transparency effect for thumnbail images */
+        
+        .demo {
+            opacity: 0.5;
+        }
+        
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+        /* contact design */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+        
+        #submit {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        #submit:hover {
+            background-color: #45a049;
+        }
+        
+        
+        #facebook {
+            left: 30%;
+        }
+        
+        #gmail {
+            left: 40%;
+        }
+        
+        #telegram {
+            left: 50%;
+        }
+        
+        #twitter {
+            left: 60%;
+        }
+        
+        .icons {
+            height: 100px;
+        }
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=date], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=tel], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container1 {
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  top: 140px;
+  position: relative;
+}
+.contact1{
+    text-align: center;
+    font-size: 20px;
+}
+    </style>
+</head>
+
+<body>
+    <nav class="nav1">
+        <P>@JOMAR</P>
+    </nav>
+    <div>
+        <div id="home">
+            <div>
+               <h1>Enjoy the beauty</h1>
+               <h1 class ="connect"> of the PHILIPPINES</h1>
+            </div>
+            
+        </div>
+        <div id="about">
+            <h1></h1>
+        </div>
+        <div id="blog">
+            <div class="container">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                    <img src="Picture/home.jpg" width="1876px" height="716px">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                    <img src="Picture/about.jpg" width="1876px" height="716px">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                    <img src="Picture/blog.jpg" width="1876px" height="716px">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="Picture/service.jpg" width="1876px" height="716px">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="Picture/contact.jpg" width="1876px" height="716px">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="Picture/image1.jpg" width="1876px" height="716px">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="Picture/home.jpg" width="310px" height="130" onclick="currentSlide(1)" alt="IMAGE1">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="Picture/about.jpg" width="310px" height="130" onclick="currentSlide(2)" alt="IMAGE2">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="Picture/blog.jpg" width="310px" height="130" onclick="currentSlide(3)" alt="IMAGE3">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="Picture/service.jpg" width="310px" height="130" onclick="currentSlide(4)" alt="IMAGE4">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="Picture/contact.jpg" width="310px" height="130" onclick="currentSlide(5)" alt="IMAGE5">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="Picture/image1.jpg" width="310px" height="130" onclick="currentSlide(6)" alt="IMAGE6">
+                    </div>
+                </div>
+                <h1></h1>
+            </div>
+            <div id="service">
+                <h1></h1>
+            </div>
+            <div id="contact">
+                
+                <div class="container1">
+                    <form action="https://script.google.com/macros/s/AKfycbyWezinvoYvzIizlfN1zXFl-3Kyl-MbJ6gSacXDe8ML7SdyQ77SMkYbVQrpWqi3kq94/exec" method="post">
+                        <p class="contact1">Contact Details</p>
+                            <div class="name">
+                                    <label for="first_name">First Name</label>
+                                    <input type="text"  id="first_name" name="first_name" placeholder="First Name" size="50">
+                                    <label for="last_name">Last Name</label>
+                                    <input type="text"  id="last_name" name="last_name" placeholder="Last Name" size="50">
+                            </div>
+        
+                            <div class="gender">
+                                    <p>Gender</p>
+                                    <input  type="radio" name="gender" id="male" value="male">
+                                    <label  for="male">Male</label>
+                                    <input  type="radio" name="gender" id="female" value="female">
+                                    <label  for="female">Female</label> 
+                            </div>
+                            <br>
+                            <div class="birthday">
+                                    <label for="dateOfBirth">Date of Birth</label>
+                                    <input type="date"  id="dateOfBirth" name="dateOfBirth">
+                            </div>
+        
+                            <div class="email">
+                                    <label for="email">Email</label>
+                                    <input type="email"  id="email" name="email" placeholder="Email" size="50">
+                            </div>
+        
+                            <div class="phone">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel"  id="phone" name="phone" placeholder="Phone Number" size="50">
+                            </div>
+             
+                            <input type="submit" id="sub">
+                            
+                    </form>
+                 <div><a href="https://docs.google.com/spreadsheets/d/1kSdKRXgJoNrVUcGwNkOUzL36OSegy-2mGUEfy7pQSig/edit#gid=0" target="_blank">Click here to open Spread Sheet </a> </div>  
+                    <div class="icons">
+                        <a href="https://www.facebook.com/mata.jomar" id="facebook"><img src=" Icons/facebook.png " width="60 " height="60 "></a>
+                        <a href="https://mail.google.com/mail/u/0/#inbox" id="gmail"><img src=" Icons/gmail.png " width="60 " height="60 "></a>
+                        <a href="https://telegram.org/" id="telegram"><img src=" Icons/telegram.png " width="60 " height="60 "></a>
+                        <a href="https://twitter.com/Mata3Jomar" id="twitter"><img src=" Icons/twitter.png " width="60 " height="60 "></a>
+                    </div>
+                </div>                                  
+            </div>  
+            <div class="bgdesign1 ">
+                <h2>MISSION</h2>
+                <p>To share the positive experience of nature trip in the philippines and spread the happiness in everyone. To gain more investors that lead to enhancement and helping the environmental calamity.</p>
+            </div>  
+            <div class="bgdesign2 ">
+                <h2>VISION</h2>
+                <p>To preserve the national treasure of the philippines and make it memorable in every country that surrounded them</p>
+            </div> 
+            <nav>
+                <a href="#home " class="home ">HOME</a>
+                <a href="#about " class="about ">ABOUT</a>
+                <a href="#blog " class="blog ">BLOG</a>
+                <a href="#service " class="service ">SERVICE</a>
+                <a href="#contact " class="contact ">CONTACT</a>
+                <h3>PHILIPPINE TREASURE</h3>
+            </nav>
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+            <script>
+                var mybutton = document.getElementById("myBtn");
+
+
+                window.onscroll = function() {
+                    scrollFunction()
+                };
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        mybutton.style.display = "block";
+                    } else {
+                        mybutton.style.display = "none";
+                    }
+                }
+
+                function topFunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
+            </script>
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides ");
+                    let dots = document.getElementsByClassName("demo ");
+                    let captionText = document.getElementById("caption ");
+                    if (n > slides.length) {
+                        slideIndex = 1
+                    }
+                    if (n < 1) {
+                        slideIndex = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none ";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active ", " ");
+                    }
+                    slides[slideIndex - 1].style.display = "block ";
+                    dots[slideIndex - 1].className += " active ";
+                    captionText.innerHTML = dots[slideIndex - 1].alt;
+                }
+            </script>
+
+        <script>
+    let form = document.querySelector("form");
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        document.querySelector("#sub").value = "Submit";
+        let data = new FormData(form);
+        fetch('https://script.google.com/macros/s/AKfycbyWezinvoYvzIizlfN1zXFl-3Kyl-MbJ6gSacXDe8ML7SdyQ77SMkYbVQrpWqi3kq94/exec', {
+                method: "POST",
+                body: data
+            })
+            .then(res => res.text())
+            .then(data => {
+                document.querySelector("#msg").innerHTML = data;
+                document.querySelector("#sub").value = "Submit"
+            });
+    })
+</script>
+  
+</body>
+
+</html> 
