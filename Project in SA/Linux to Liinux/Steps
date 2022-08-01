@@ -1,0 +1,10 @@
+Create a file in Desktop
+open the terminal 
+update the pc using this command "sudo apt update"
+install ssh in this command "sudo apt install ssh"
+check the status of ssh using this command "sudo systemctl status ssh"
+Start the ssh in terminal "sudo systemctl start ssh"
+type scp in terminal "scp" then the file you want to share in other pc "Hellopc2" then the desitnation username "mata@" then the ipadd of the destination pc "192.168.1.5" then the directory you want to share "/home/mata/Desktop " 
+then the terminal ask the pasword of destination pc
+then type y to yes
+then thats it check the destination pc and the file you share enjoy
